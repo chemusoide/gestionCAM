@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('apellido2')->nullable(); // Segundo apellido
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('img')->nullable();
             $table->string('password');
             $table->string('telefono')->nullable();
             $table->date('fechanacimiento')->nullable();

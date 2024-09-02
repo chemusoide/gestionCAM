@@ -71,4 +71,18 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Grado::class, 'tiene', 'usuario_id', 'grado_id');
     }
+
+    public function dojosDirige()
+    {
+        return $this->belongsToMany(Dojo::class, 'dirige', 'fk_usuario', 'fk_dojo')
+                    ->withPivot('fecha_inicio', 'fecha_fin')
+                    ->withTimestamps();
+    }
+
+    public function dojosGestiona()
+    {
+        return $this->belongsToMany(Dojo::class, 'gestiona', 'fk_usuario', 'fk_dojo')
+                    ->withPivot('fecha_inicio', 'fecha_fin')
+                    ->withTimestamps();
+    }
 }

@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('cuotas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('fk_dojo')->constrained('dojos');
             $table->string('nombre');
+            $table->float('cantidad');
             $table->text('obs')->nullable();
             $table->timestamps();
             $table->string('usuarioCreacion')->nullable();
             $table->string('usuarioModificacion')->nullable();
+            // Definir clave foránea
+            $table->foreign('fk_dojo', 'fk_cuota_dojo')
+                  ->references('id')->on('dojos')
+                  ->onDelete('cascade');
         });
     }
 

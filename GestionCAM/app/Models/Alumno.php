@@ -9,7 +9,7 @@ class Alumno extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'fk_usuario', 'fk_dojo', 'fechaAlta', 'fechaBaja', 'dojoCho', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'fk_usuario', 'fk_dojo', 'fechaAlta', 'fechaBaja', 'obs', 'img', 'usuarioCreacion', 'usuarioModificacion'
     ];
 
     public function usuario()

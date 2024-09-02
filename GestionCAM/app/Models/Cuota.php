@@ -10,11 +10,16 @@ class Cuota extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'nombre', 'cantidad', 'obs', 'usuarioCreacion', 'usuarioModificacion', 'fk_dojo'
     ];
 
     public function pagas()
     {
         return $this->hasMany(Paga::class, 'fk_cuota');
+    }
+    
+    public function dojo()
+    {
+        return $this->belongsTo(Dojo::class, 'fk_dojo');
     }
 }

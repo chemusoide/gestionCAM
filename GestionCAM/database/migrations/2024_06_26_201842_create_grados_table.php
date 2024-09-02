@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('grados', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->date('fechaObtencion')->nullable();
             $table->text('obs')->nullable();
             $table->timestamps();
             $table->string('usuarioCreacion')->nullable();

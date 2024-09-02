@@ -21,7 +21,20 @@ class DojoController extends Controller
 
     public function store(Request $request)
     {
-        $dojo = Dojo::create($request->all());
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $dojo = new Dojo($request->all());
+
+        if ($request->hasFile('img')) {
+            $path = $request->file('img')->store('images/dojos', 'public');
+            $dojo->img = $path;
+        }
+
+        $dojo->save();
+
         return response()->json($dojo, 201);
     }
 
@@ -29,6 +42,11 @@ class DojoController extends Controller
     {
         $dojo = Dojo::findOrFail($id);
         $dojo->update($request->all());
+        
+        if ($request->hasFile('img')) {
+            $path = $request->file('img')->store('images/dojos', 'public');
+            $dojo->img = $path;
+        }
         return response()->json($dojo, 200);
     }
 

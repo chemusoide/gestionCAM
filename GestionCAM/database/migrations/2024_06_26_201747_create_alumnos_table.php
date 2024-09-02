@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignId('fk_dojo')->constrained('dojos');
             $table->date('fechaAlta')->nullable();
             $table->date('fechaBaja')->nullable();
-            $table->boolean('dojoCho')->default(false);
             $table->text('obs')->nullable();
             $table->timestamps();
             $table->string('usuarioCreacion')->nullable();

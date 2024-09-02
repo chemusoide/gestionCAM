@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('grado_id')->constrained('grados')->onDelete('cascade');
+            $table->date('fechaObtencion')->nullable();
+            $table->text('obs')->nullable();
             $table->timestamps();
         });
     }

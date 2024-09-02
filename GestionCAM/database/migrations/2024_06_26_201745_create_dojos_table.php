@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('direccion')->nullable();
             $table->string('telefono')->nullable();
+            $table->string('img')->nullable();
             $table->text('obs')->nullable();
             $table->timestamps();
             $table->string('usuarioCreacion')->nullable();

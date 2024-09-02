@@ -10,11 +10,25 @@ class Dojo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'direccion', 'telefono', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'nombre', 'direccion', 'telefono', 'img', 'obs', 'usuarioCreacion', 'usuarioModificacion'
     ];
 
     public function alumnos()
     {
         return $this->hasMany(Alumno::class, 'fk_dojo');
+    }
+
+    public function dojoChos()
+    {
+        return $this->belongsToMany(User::class, 'dirige', 'fk_dojo', 'fk_usuario')
+                    ->withPivot('fecha_inicio', 'fecha_fin')
+                    ->withTimestamps();
+    }
+
+    public function shihans()
+    {
+        return $this->belongsToMany(User::class, 'gestiona', 'fk_dojo', 'fk_usuario')
+                    ->withPivot('fecha_inicio', 'fecha_fin')
+                    ->withTimestamps();
     }
 }
