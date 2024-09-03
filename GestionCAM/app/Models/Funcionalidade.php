@@ -10,7 +10,7 @@ class Funcionalidade extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'nombre', 'obs', 'usuario_creacion', 'usuario_modificacion'
     ];
 
     public function permisos()

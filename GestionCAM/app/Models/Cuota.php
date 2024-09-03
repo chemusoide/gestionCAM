@@ -10,7 +10,7 @@ class Cuota extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'cantidad', 'obs', 'usuarioCreacion', 'usuarioModificacion', 'fk_dojo'
+        'nombre', 'cantidad', 'obs', 'usuario_creacion', 'usuario_modificacion', 'fk_dojo'
     ];
 
     public function pagas()

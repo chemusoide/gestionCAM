@@ -10,7 +10,7 @@ class Dojo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'direccion', 'telefono', 'img', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'nombre', 'direccion', 'telefono', 'img', 'obs', 'usuario_creacion', 'usuario_modificacion'
     ];
 
     public function alumnos()

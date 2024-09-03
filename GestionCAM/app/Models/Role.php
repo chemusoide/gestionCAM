@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Rol extends Model
+class Role extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'nombre', 'obs', 'usuario_creacion', 'usuario_modificacion'
     ];
 
     public function usuarios()

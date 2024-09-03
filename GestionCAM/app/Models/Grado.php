@@ -10,11 +10,11 @@ class Grado extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'fechaObtencion', 'obs', 'usuarioCreacion', 'usuarioModificacion'
+        'nombre', 'fechaObtencion', 'obs', 'usuario_creacion', 'usuario_modificacion'
     ];
 
     public function usuarios()
     {
-        return $this->belongsToMany(User::class, 'usuario_grado', 'grado_id', 'usuario_id');
+        return $this->belongsToMany(User::class, 'usuario_grado', 'fk_grado', 'fk_usuario');
     }
 }

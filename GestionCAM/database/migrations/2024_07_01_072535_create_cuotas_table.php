@@ -18,8 +18,8 @@ return new class extends Migration
             $table->float('cantidad');
             $table->text('obs')->nullable();
             $table->timestamps();
-            $table->string('usuarioCreacion')->nullable();
-            $table->string('usuarioModificacion')->nullable();
+            $table->string('usuario_creacion')->nullable();
+            $table->string('usuario_modificacion')->nullable();
             // Definir clave foránea
             $table->foreign('fk_dojo', 'fk_cuota_dojo')
                   ->references('id')->on('dojos')

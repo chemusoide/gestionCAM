@@ -27,8 +27,8 @@ return new class extends Migration
             $table->text('obs')->nullable(); // Observaciones
             $table->rememberToken();
             $table->timestamps();
-            $table->string('usuarioCreacion')->nullable();
-            $table->string('usuarioModificacion')->nullable();
+            $table->string('usuario_creacion')->nullable();
+            $table->string('usuario_modificacion')->nullable();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

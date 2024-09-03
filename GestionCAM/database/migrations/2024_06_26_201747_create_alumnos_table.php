@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('fk_usuario')->constrained('users');
             $table->foreignId('fk_dojo')->constrained('dojos');
-            $table->date('fechaAlta')->nullable();
-            $table->date('fechaBaja')->nullable();
+            $table->date('fecha_alta')->nullable();
+            $table->date('fecha_baja')->nullable();
             $table->text('obs')->nullable();
             $table->timestamps();
-            $table->string('usuarioCreacion')->nullable();
-            $table->string('usuarioModificacion')->nullable();
+            $table->string('usuario_creacion')->nullable();
+            $table->string('usuario_modificacion')->nullable();
         });
     }
 

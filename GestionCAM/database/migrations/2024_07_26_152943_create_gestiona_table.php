@@ -13,10 +13,10 @@ class CreateGestionaTable extends Migration
     {
         Schema::create('gestiona', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained('users');
-            $table->foreignId('dojo_id')->constrained('dojos');
-            $table->date('fechaInicio');
-            $table->date('fechaFin')->nullable();
+            $table->foreignId('fk_usuario')->constrained('users');
+            $table->foreignId('fk_dojo')->constrained('dojos');
+            $table->date('fecha_inicio');
+            $table->date('fecha_fin')->nullable();
             $table->timestamps();
         });
     }

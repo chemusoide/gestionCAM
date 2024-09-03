@@ -10,7 +10,7 @@ class Permiso extends Model
     use HasFactory;
 
     protected $fillable = [
-        'fk_rol', 'fk_funcionalidad', 'usuarioCreacion', 'usuarioModificacion'
+        'fk_rol', 'fk_funcionalidad', 'usuario_creacion', 'usuario_modificacion'
     ];
 
     public function rol()

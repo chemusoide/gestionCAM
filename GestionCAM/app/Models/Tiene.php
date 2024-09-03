@@ -12,17 +12,17 @@ class Tiene extends Model
     protected $table = 'tiene';
 
     protected $fillable = [
-        'usuario_id',
-        'grado_id',
+        'fk_usuario',
+        'fk_grado',
     ];
 
     public function usuario()
     {
-        return $this->belongsTo(User::class, 'usuario_id');
+        return $this->belongsTo(User::class, 'fk_usuario');
     }
 
     public function grado()
     {
-        return $this->belongsTo(Grado::class, 'grado_id');
+        return $this->belongsTo(Grado::class, 'fk_grado');
     }
 }

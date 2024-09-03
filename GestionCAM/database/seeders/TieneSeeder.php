@@ -13,10 +13,10 @@ class TieneSeeder extends Seeder
     public function run(): void
     {
         $tiene = [
-            ['usuario_id' => 2, 'grado_id' => 6],
-            ['usuario_id' => 3, 'grado_id' => 5],
-            ['usuario_id' => 4, 'grado_id' => 4],
-            ['usuario_id' => 5, 'grado_id' => 1],
+            ['fk_usuario' => 2, 'fk_grado' => 6],
+            ['fk_usuario' => 3, 'fk_grado' => 5],
+            ['fk_usuario' => 4, 'fk_grado' => 4],
+            ['fk_usuario' => 5, 'fk_grado' => 1],
         ];
 
         DB::table('tiene')->insert($tiene);

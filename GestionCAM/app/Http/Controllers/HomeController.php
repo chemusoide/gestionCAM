@@ -17,13 +17,13 @@ class HomeController extends Controller
         if ($user->rol->nombre == 'Administrador') {
             $dojos = Dojo::all();
         } elseif ($user->rol->nombre == 'Shihan') {
-            $dojos = $user->gestiona()->get();
+            $dojos = $user->dojosGestiona()->get();
         } elseif ($user->rol->nombre == 'Dojo-Cho') {
-            $dojos = $user->dirige()->get();
+            $dojos = $user->dojosDirige()->get();
         } else {
             $dojos = $user->alumnos()->first()->dojo()->get();
         }
 
-        return view('home', compact('dojos'));
+        return view('dashboard', compact('dojos'));
     }
 }

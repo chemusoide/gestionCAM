@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('tiene', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('grado_id')->constrained('grados')->onDelete('cascade');
-            $table->date('fechaObtencion')->nullable();
+            $table->foreignId('fk_usuario')->constrained('users')->onDelete('cascade');
+            $table->foreignId('fk_grado')->constrained('grados')->onDelete('cascade');
+            $table->date('fecha_obtencion')->nullable();
             $table->text('obs')->nullable();
             $table->timestamps();
         });

@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('fk_rol')->constrained('roles');
             $table->foreignId('fk_funcionalidad')->constrained('funcionalidades');
             $table->timestamps();
-            $table->string('usuarioCreacion')->nullable();
-            $table->string('usuarioModificacion')->nullable();
+            $table->string('usuario_creacion')->nullable();
+            $table->string('usuario_modificacion')->nullable();
         });
     }
 

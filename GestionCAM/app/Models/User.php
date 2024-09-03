@@ -27,8 +27,8 @@ class User extends Authenticatable
         'fk_rol',
         'obs',
         'password',
-        'usuarioCreacion',
-        'usuarioModificacion'
+        'usuario_creacion',
+        'usuario_modificacion'
     ];
 
     /**
@@ -69,7 +69,7 @@ class User extends Authenticatable
 
     public function grados()
     {
-        return $this->belongsToMany(Grado::class, 'tiene', 'usuario_id', 'grado_id');
+        return $this->belongsToMany(Grado::class, 'tiene', 'fk_usuario', 'fk_grado');
     }
 
     public function dojosDirige()

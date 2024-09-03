@@ -10,7 +10,7 @@ class Paga extends Model
     use HasFactory;
 
     protected $fillable = [
-        'fk_usuario', 'fk_cuota', 'usuarioCreacion', 'usuarioModificacion'
+        'fk_usuario', 'fk_cuota', 'usuario_creacion', 'usuario_modificacion'
     ];
 
     public function usuario()

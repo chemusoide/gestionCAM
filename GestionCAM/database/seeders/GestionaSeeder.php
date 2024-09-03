@@ -11,18 +11,18 @@ class GestionaSeeder extends Seeder
     {
         $gestiona = [
             [
-                'usuario_id' => 2,
-                'dojo_id' => 1,
-                'fechaInicio' => now(),
-                'fechaFin' => null,
+                'fk_usuario' => 2,
+                'fk_dojo' => 1,
+                'fecha_inicio' => now(),
+                'fecha_fin' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'usuario_id' => 2,
-                'dojo_id' => 2,
-                'fechaInicio' => now(),
-                'fechaFin' => null,
+                'fk_usuario' => 2,
+                'fk_dojo' => 2,
+                'fecha_inicio' => now(),
+                'fecha_fin' => null,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

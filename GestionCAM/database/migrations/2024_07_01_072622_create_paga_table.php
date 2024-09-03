@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('fk_usuario')->constrained('users');
             $table->foreignId('fk_cuota')->constrained('cuotas');
             $table->timestamps();
-            $table->string('usuarioCreacion')->nullable();
-            $table->string('usuarioModificacion')->nullable();
+            $table->string('usuario_creacion')->nullable();
+            $table->string('usuario_modificacion')->nullable();
         });
     }
 
